@@ -1,6 +1,6 @@
 databases:
  -  name: postgres
-    ipAllowList: true
+    ipAllowList: []
     databaseName: rails_on_render_production
     user: rails_on_render
 
