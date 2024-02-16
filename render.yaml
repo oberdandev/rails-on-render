@@ -1,10 +1,10 @@
 databases:
- -  name: postgres
+  - name: postgres
     ipAllowList: []
-    databaseName: rails_on_render_production
+    databaseName: rails_on_render
     user: rails_on_render
 
-services: 
+services:
   - type: web
     name: rails_on_render
     env: ruby
@@ -13,7 +13,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: database
+          name: postgres
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
